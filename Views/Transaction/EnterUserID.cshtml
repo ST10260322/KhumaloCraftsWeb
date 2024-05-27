@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Enter User ID";
+}
+
+<h2>Enter User ID</h2>
+
+<form asp-action="GetUserTransactions" method="post">
+    <div class="form-group">
+        <label for="userID">User ID</label>
+        <input type="number" class="form-control" id="userID" name="userID" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -1,0 +1,16 @@
+﻿@model KhumaloCraftsWeb.Models.userTable
+@{
+    ViewData["Title"] = "Sign Up";
+}
+
+<h1>Sign Up</h1>
+<p>After signing up still need to login to be able to order items</p>
+<body>
+    <form action="UserSignIn" method="post">
+        <p>Sign Up</p>
+        <input type="text" name="Name" placeholder="Name" required>
+        <input type="text" name="Surname" placeholder="Surname" required>
+        <input type="text" name="Email" placeholder="example@gmail.com" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>

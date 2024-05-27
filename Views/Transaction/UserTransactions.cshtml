@@ -1,0 +1,40 @@
+﻿@model List<KhumaloCraftsWeb.Models.Transaction>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Transactions</title>
+</head>
+<body>
+    <h2>User Transactions</h2>
+
+    @if (Model.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Transaction ID</th>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var transaction in Model)
+                {
+                    <tr>
+                        <td>@transaction.TransactionID</td>
+                        <td>@transaction.ProductID</td>
+                        <td>@transaction.ProductName</td>
+                       
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No transactions found for this user.</p>
+    }
+</body>
+</html>
